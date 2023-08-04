@@ -31,7 +31,7 @@ public class VideoReviewDaoImpl implements VideoReviewDao{
         else {
         	List<VideoReview> templist = new ArrayList<VideoReview>();
         	templist.add(videoReview);
-            videoReviewDB.put(reviewNo, templist); //리뷰  넘버와 내용 put
+            videoReviewDB.put(num, templist); //리뷰  넘버와 내용 put
         }
     }
 

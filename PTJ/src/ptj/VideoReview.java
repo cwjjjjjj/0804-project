@@ -6,6 +6,15 @@ public class VideoReview {
 	private int reviewNo;
 	private String nickName;
 	private String content;
+	public VideoReview() {
+
+	}
+	public VideoReview(int videoNo, int reviewNo, String nickName, String content) {
+		this.videoNo = videoNo;
+		this.reviewNo = reviewNo;
+		this.nickName = nickName;
+		this.content = content;
+	}
 	public int getVideoNo() {
 		return videoNo;
 	}
