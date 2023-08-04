@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface VideoReviewDao {
 	
-	int InsertReview(VideoReview videoReview);
+	void InsertReview(VideoReview videoReview);
 	List<VideoReview> selectReview(int videoNo);
 	
 }
