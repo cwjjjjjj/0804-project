@@ -36,11 +36,12 @@ public class main {
 					int no2 = Integer.parseInt(br.readLine());
 					//없는 영상일 경우 문구 출력 후 영상 선택 화면으로 복귀
 					while(true) {
-						if(no2>vd.selectVideo().size()) {
+						if(no2>vd.selectVideo().size() || no2<=0) {
 							System.out.println("보기에 없는 번호입니다.");
 							break;
 						}
 						util.printLine();
+						
 						System.out.println("번호 :"+vd.selectVideoByNo(no2).getNo());
 						System.out.println("제목 :"+vd.selectVideoByNo(no2).getTitle());
 						System.out.println("운동 :"+vd.selectVideoByNo(no2).getPart());
@@ -68,6 +69,10 @@ public class main {
 						//이전으로 선택 시, 영상 선택 화면으로 복구
 						if(no3==0) {
 							break;
+						}
+						else if(no3<0 || no3>1) {
+							System.out.println("보기에 없는 번호입니다.");
+							continue;
 						}
 						else if(no3==1) {
 							//리뷰 등록, 출력되는 입력하세요 : 이후를 클릭 후 내용을 입력해야 출력이 잘됨. 입력하세요 이전에 글자를 입력 후 엔터를 누를 경우 오류 발생
